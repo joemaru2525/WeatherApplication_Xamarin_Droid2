@@ -1,16 +1,30 @@
-﻿using Android.App;
+﻿using System;
+using HtmlAgilityPack;
+
+using Android.App;
 using Android.Widget;
 using Android.OS;
 
-using HtmlAgilityPack;
-using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+
+using Android.Content;
+using Android.Runtime;
 using Android.Views;
+using Java.Net;
 using Android.Graphics;
+using Java.IO;
+using Android.Graphics.Drawables;
+using Android.Util;
 using System.Net;
+using System.IO;
+
+
 
 namespace YahooWeather_Android
 {
-    [Activity(Label = "YahooWeather_Android", MainLauncher = true, Icon = "@mipmap/icon")]
+    [Activity(Label = "Yahoo!お天気情報", MainLauncher = true, Icon = "@mipmap/icon")]
     public class MainActivity : Activity
     {
         int count = 1;
@@ -110,17 +124,27 @@ namespace YahooWeather_Android
             HtmlNodeCollection node7 = doc.DocumentNode.SelectNodes("//div[@class='forecastCity']//p[@class='pict']//img");
             var imageURL = node7[0].GetAttributeValue("src", "");
 
-            Android.Net.Uri urlImage = Android.Net.Uri.Parse(imageURL);
-            imageWeather.SetImageResource(Resource.Drawable.moon);
-
             System.Diagnostics.Debug.WriteLine(imageURL);
-            System.Diagnostics.Debug.WriteLine(urlImage);
 
-            //ImageView image2 = FindViewById<ImageView>(Resource.Id.imageView2);
-            //ImageView image3 = FindViewById<ImageView>(Resource.Id.imageView3);
+            //imageWeather.SetImageResource(Resource.Drawable.moon);
 
-            //image2.SetImageResource(Resource.Drawable.moon);  //OK
-            //image3.(urlImage); //NG
+            var imageBitmap = GetImageBitmapFromUrl(imageURL);
+            imageWeather.SetImageBitmap(imageBitmap);
+
+        }
+
+        private Bitmap GetImageBitmapFromUrl(string url)
+        {
+            Bitmap imageBitmap = null;
+            using (var webClient = new WebClient())
+            {
+                var imageBytes = webClient.DownloadData(url);
+                if (imageBytes != null && imageBytes.Length > 0)
+                {
+                    imageBitmap = BitmapFactory.DecodeByteArray(imageBytes, 0, imageBytes.Length);
+                }
+            }
+            return imageBitmap;
         }
 
     }
