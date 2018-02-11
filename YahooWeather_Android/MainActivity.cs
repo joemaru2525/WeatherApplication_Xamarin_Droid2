@@ -4,7 +4,9 @@ using Android.OS;
 
 using HtmlAgilityPack;
 using System;
-using System.Reflection.Emit;
+using Android.Views;
+using Android.Graphics;
+using System.Net;
 
 namespace YahooWeather_Android
 {
@@ -12,6 +14,9 @@ namespace YahooWeather_Android
     public class MainActivity : Activity
     {
         int count = 1;
+
+        public object ImageService { get; private set; }
+        public object ImageSource { get; private set; }
 
         protected override void OnCreate(Bundle savedInstanceState)
         {
@@ -38,6 +43,8 @@ namespace YahooWeather_Android
             var labelPrecip03 = FindViewById<TextView>(Resource.Id.textView15);
             var labelPrecip04 = FindViewById<TextView>(Resource.Id.textView16);
 
+            ImageView imageWeather = FindViewById<ImageView>(Resource.Id.imageView1);
+
 
             //(1)指定したサイトのHTMLをストリームで取得する
             const string url = "https://weather.yahoo.co.jp/weather/jp/14/4610.html";
@@ -63,7 +70,7 @@ namespace YahooWeather_Android
             //Anounce Date & Time（発表日時）
             HtmlNodeCollection node1 =
             doc.DocumentNode.SelectNodes("//div[@class='yjw_title_h2 yjw_clr']//p[@class='yjSt yjw_note_h2']");
-            labelAnnounce.Text = node1[0].InnerText; 
+            labelAnnounce.Text = node1[0].InnerText;
 
             //WeatherDate（対象日）
             HtmlNodeCollection node2 =
@@ -101,13 +108,20 @@ namespace YahooWeather_Android
 
             //WeatherPicture（天気画像）
             HtmlNodeCollection node7 = doc.DocumentNode.SelectNodes("//div[@class='forecastCity']//p[@class='pict']//img");
-
             var imageURL = node7[0].GetAttributeValue("src", "");
-            //var data = NSData.FromUrl(new NSUrl(imageURL));
-            //var image = UIImage.LoadFromData(data);
-            //this.imageWeather.Image = image;
 
+            Android.Net.Uri urlImage = Android.Net.Uri.Parse(imageURL);
+            imageWeather.SetImageResource(Resource.Drawable.moon);
+
+            System.Diagnostics.Debug.WriteLine(imageURL);
+            System.Diagnostics.Debug.WriteLine(urlImage);
+
+            //ImageView image2 = FindViewById<ImageView>(Resource.Id.imageView2);
+            //ImageView image3 = FindViewById<ImageView>(Resource.Id.imageView3);
+
+            //image2.SetImageResource(Resource.Drawable.moon);  //OK
+            //image3.(urlImage); //NG
         }
+
     }
 }
-

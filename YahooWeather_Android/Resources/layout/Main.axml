@@ -41,12 +41,12 @@
         android:paddingTop="5dp" />
     <ImageView
         android:src="@android:drawable/ic_menu_gallery"
-        android:layout_width="wrap_content"
+        android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:id="@+id/imageView1"
         android:paddingLeft="10dp"
-        android:paddingTop="10dp"
-        android:paddingBottom="10dp" />
+        android:paddingTop="20dp"
+        android:paddingBottom="20dp" />
     <TextView
         android:textAppearance="?android:attr/textAppearanceMedium"
         android:layout_width="match_parent"

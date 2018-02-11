@@ -66,6 +66,12 @@
     <AndroidResource Include="Resources\mipmap-xhdpi\Icon.png" />
     <AndroidResource Include="Resources\mipmap-xxhdpi\Icon.png" />
     <AndroidResource Include="Resources\mipmap-xxxhdpi\Icon.png" />
+    <AndroidResource Include="Resources\drawable\blizzard.gif" />
+    <AndroidResource Include="Resources\drawable\clouds.gif" />
+    <AndroidResource Include="Resources\drawable\moon.gif" />
+    <AndroidResource Include="Resources\drawable\snow.gif" />
+    <AndroidResource Include="Resources\drawable\sun_clouds_st.gif" />
+    <AndroidResource Include="Resources\drawable\sun_rain_af.gif" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Resources\drawable\" />

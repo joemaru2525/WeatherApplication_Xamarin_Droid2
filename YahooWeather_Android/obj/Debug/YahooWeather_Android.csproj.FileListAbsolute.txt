@@ -19,6 +19,12 @@
 /Users/maruyayousuke/work_xamarin/YahooWeather_Android/YahooWeather_Android/bin/Debug/HtmlAgilityPack.dll
 /Users/maruyayousuke/work_xamarin/YahooWeather_Android/YahooWeather_Android/bin/Debug/HtmlAgilityPack.pdb
 /Users/maruyayousuke/work_xamarin/YahooWeather_Android/YahooWeather_Android/bin/Debug/HtmlAgilityPack.xml
+/Users/maruyayousuke/work_xamarin/YahooWeather_Android/YahooWeather_Android/obj/Debug/res/drawable/blizzard.gif
+/Users/maruyayousuke/work_xamarin/YahooWeather_Android/YahooWeather_Android/obj/Debug/res/drawable/clouds.gif
+/Users/maruyayousuke/work_xamarin/YahooWeather_Android/YahooWeather_Android/obj/Debug/res/drawable/moon.gif
+/Users/maruyayousuke/work_xamarin/YahooWeather_Android/YahooWeather_Android/obj/Debug/res/drawable/snow.gif
+/Users/maruyayousuke/work_xamarin/YahooWeather_Android/YahooWeather_Android/obj/Debug/res/drawable/sun_clouds_st.gif
+/Users/maruyayousuke/work_xamarin/YahooWeather_Android/YahooWeather_Android/obj/Debug/res/drawable/sun_rain_af.gif
 bin/Debug/Mono.Android.pdb
 obj/Debug/linksrc/YahooWeather_Android.pdb
 obj/Debug/linksrc/HtmlAgilityPack.pdb
