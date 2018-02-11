@@ -1,0 +1,2 @@
+android.app.Application
+com.babymetal.YahooWeather_Android

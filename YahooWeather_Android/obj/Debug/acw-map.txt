@@ -1,0 +1,4 @@
+YahooWeather_Android.MainActivity, YahooWeather_Android;md5ab6221fc2580e59dc3c925987402ee54.MainActivity
+YahooWeather_Android.MainActivity, YahooWeather_Android, Version=1.0.0.0, Culture=neutral, PublicKeyToken=null;md5ab6221fc2580e59dc3c925987402ee54.MainActivity
+YahooWeather_Android.MainActivity;md5ab6221fc2580e59dc3c925987402ee54.MainActivity
+yahooweather_android.MainActivity;md5ab6221fc2580e59dc3c925987402ee54.MainActivity

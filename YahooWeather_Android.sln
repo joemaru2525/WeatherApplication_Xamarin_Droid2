@@ -1,0 +1,17 @@
+
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2012
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "YahooWeather_Android", "YahooWeather_Android\YahooWeather_Android.csproj", "{A694BE40-136A-4EA3-8B7B-891CACBB0B9B}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{A694BE40-136A-4EA3-8B7B-891CACBB0B9B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A694BE40-136A-4EA3-8B7B-891CACBB0B9B}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A694BE40-136A-4EA3-8B7B-891CACBB0B9B}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A694BE40-136A-4EA3-8B7B-891CACBB0B9B}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
